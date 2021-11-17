@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "Nunito";
+  src: url("../fonts/Nunito/Nunito-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nunito Bold";
+  src: url("../fonts/Nunito/Nunito-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: oblique;
+}
+
+@font-face {
+  font-family: "Nunito Italic";
+  src: url("../fonts/Nunito/Nunito-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Nunoto Thin";
+  src: url("../fonts/Nunito/Nunito-Light.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url("../fonts/Montserrat/Montserrat-Bold.ttf");
+  font-weight: 600;
+  font-style: oblique;
+}
+
+html {
+  font-size: 32px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+*::selection {
+  background: skyblue;
+  color: black;
+}
+
+.haircut-reg {
+  position: fixed;
+  bottom: 0.8rem;
+  right: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: skyblue;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-align: center;
+  color: black;
+  cursor: pointer;
+  opacity: 0.95;
+  animation-iteration-count: infinite;
+}
+
+/* personal computer CSS */
+@media (min-width: 768px) {
+
+}

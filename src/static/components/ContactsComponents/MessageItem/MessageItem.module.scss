@@ -1,0 +1,38 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 2px solid deepskyblue;
+  border-radius: 10px;
+
+  .content {
+
+    h3 {
+      margin: 0;
+      line-break: anywhere;
+      hyphens: auto;
+    }
+
+    .date {
+      margin-top: 0;
+      font-size: 0.5rem;
+    }
+
+    p {
+      font-size: 0.7rem;
+      hyphens: auto;
+    }
+  }
+
+  .buttons {
+
+    button {
+      margin-right: 0.5rem;
+      background: none;
+      border: 0;
+      font-size: 0.7rem;
+      cursor: pointer;
+    }
+  }
+}

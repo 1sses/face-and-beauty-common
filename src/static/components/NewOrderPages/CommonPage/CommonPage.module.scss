@@ -1,0 +1,68 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family: Nunito, sans-serif;
+
+  h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .pages {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .result {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    border: 2px dashed deepskyblue;
+    margin: 0.5rem;
+    padding: 0.5rem;
+
+    h3 {
+      margin-top: 0;
+    }
+
+    h4 {
+      margin: 0 0 0.5rem;
+    }
+
+    span {
+      font-size: 0.7rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .buttons {
+
+  }
+}
+
+.wrapper::-webkit-scrollbar {
+  width: 5px;
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+  background: deepskyblue;
+  border-radius: 5px;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    h2 {
+      font-size: 2rem;
+    }
+    .pages {
+      flex-direction: row;
+    }
+    .result {
+      width: 500px;
+    }
+  }
+}

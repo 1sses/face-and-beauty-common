@@ -1,0 +1,15 @@
+.header {
+  margin: 0 1rem;
+  border-bottom: 2px solid deepskyblue;
+}
+
+.wrapper {
+  padding: 1rem;
+
+  .delete {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

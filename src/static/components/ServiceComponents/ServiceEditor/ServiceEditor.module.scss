@@ -1,0 +1,97 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .selects {
+      display: flex;
+      flex-direction: column;
+
+      select {
+        width: 270px;
+        height: 54px;
+        margin: 0.3rem 0.3rem 0.3rem 0;
+        padding: 1px 2px 1px 0.5rem;
+        border-radius: 0;
+        border: 1px solid black;
+        font-size: 0.6rem;
+        font-family: "Nunoto Thin", sans-serif;
+        outline: 0;
+
+        &:focus {
+          border-color: deepskyblue;
+        }
+      }
+
+      .switcher {
+        position: absolute;
+        top: 0.6rem;
+        right: 0;
+        background: none;
+        border: 0;
+        color: black;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+
+      input {
+        width: 250px;
+        margin-left: 0;
+      }
+    }
+
+    .inputs {
+      display: flex;
+      flex-direction: column;
+
+      input {
+        width: 250px;
+        margin-left: 0;
+      }
+    }
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+
+    button:nth-child(2) {
+      margin-top: 0.3rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    overflow-y: hidden;
+    .container {
+      flex-direction: row;
+      .selects {
+        select {
+          width: 420px;
+        }
+        .switcher {
+          top: 0.6rem;
+          right: -1.2rem;
+        }
+        input {
+          width: 400px;
+        }
+      }
+      .inputs {
+        input {
+          width: 400px;
+        }
+      }
+    }
+    .buttons {
+      margin-left: 3rem;
+    }
+  }
+}

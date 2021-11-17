@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  width: 350px;
+  margin: 1rem 0;
+
+  a {
+    margin-right: 0.5rem;
+    font-size: 0.7rem;
+    color: black;
+    transition: all 0.2s ease-in-out;
+
+    &:hover, &:focus {
+      color: deepskyblue;
+    }
+  }
+
+  span {
+    font-family: "Nunoto Thin", sans-serif;
+    font-size: 0.7rem;
+  }
+}

@@ -1,0 +1,49 @@
+.wrapper {
+  position: fixed;
+  left: 17%;
+  width: 8rem;
+  min-height: 1.5rem;
+  max-height: 5rem;
+  display: flex;
+  align-items: center;
+  background: forestgreen;
+  color: white;
+  border-radius: 0.5rem;
+  font-family: Nunito, sans-serif;
+
+  opacity: 1;
+  z-index: 1;
+  transform: translateY(-6rem);
+  transition: transform .3s ease-out, z-index 0s linear, opacity .3s ease-out;
+
+  i {
+    position: absolute;
+    top: 0.3rem;
+    right: 0.3rem;
+    cursor: pointer;
+  }
+
+  span {
+    display: inline-block;
+    width: calc(100% - 1.5rem);
+    padding: 0.3rem;
+    font-size: 0.7rem;
+  }
+}
+
+.alert {
+  background: crimson;
+}
+
+.animation {
+  z-index: 50;
+  transform: translateY(1rem);
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    left: 35%;
+    width: 15rem;
+  }
+}

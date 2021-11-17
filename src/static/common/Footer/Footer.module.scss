@@ -1,0 +1,37 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-family: Nunito, sans-serif;
+  background: #222;
+  color: white;
+
+  .item {
+
+    max-width: 350px;
+    padding-left: 0.7rem;
+    font-size: 0.6rem;
+
+    .header {
+
+    }
+
+    .text {
+      hyphens: auto;
+
+      a {
+        color: white;
+        text-decoration: none;
+        &:hover, &:focus {
+          color: skyblue;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    flex-direction: row;
+  }
+}

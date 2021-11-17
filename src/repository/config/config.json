@@ -1,0 +1,54 @@
+{
+  "developmentHeroku": {
+    "username": "jkspuvnlamwhzb",
+    "password": "810728d1df264d108f260dd70002cbe0d5e67024699aa5f303560b4e19707afb",
+    "database": "d3rnmv19f0lur7",
+    "host": "ec2-34-202-66-20.compute-1.amazonaws.com",
+    "port": "5432",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    },
+    "logging": false
+  },
+  "development": {
+    "username": "postgres",
+    "password": "123",
+    "database": "barbershop",
+    "host": "localhost",
+    "dialect": "postgres",
+    "logging": false
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "productionOld": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "jkspuvnlamwhzb",
+    "password": "810728d1df264d108f260dd70002cbe0d5e67024699aa5f303560b4e19707afb",
+    "database": "d3rnmv19f0lur7",
+    "host": "ec2-34-202-66-20.compute-1.amazonaws.com",
+    "port": "5432",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    },
+    "logging": false
+  }
+}

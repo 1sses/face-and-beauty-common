@@ -1,0 +1,7 @@
+const auth = {
+  SECRET_KEY: 'cf8f281b-38a1-482d-8981-80a2f8276b1e',
+  SECRET_ADMIN: '0f2b84016660d4f2131958bdeee990673b4e0d03',
+  SECRET_BARBER: '6e17993967524cba29e0470e002307b8ac963154'
+}
+
+module.exports = { auth }

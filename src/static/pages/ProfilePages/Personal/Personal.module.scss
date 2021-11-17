@@ -1,0 +1,107 @@
+.header {
+  margin: 0 1rem;
+  border-bottom: 2px solid deepskyblue;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  padding: 1rem;
+
+  h3 {
+    margin: 0.5rem 0;
+    font-size: 0.75rem;
+  }
+
+  .profile {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      margin-left: 0;
+    }
+
+    button {
+      margin-top: 0.3rem;
+    }
+
+    .inputBox {
+      display: flex;
+      align-items: center;
+
+      button {
+        background: none;
+        border: 0;
+        cursor: pointer;
+        font-size: 0.9rem;
+      }
+    }
+
+    .passwordBox {
+
+      i {
+        top: 0.85rem;
+        right: 0.8rem;
+        font-size: 0.6rem;
+      }
+    }
+
+    .logout {
+      margin-top: 1rem;
+    }
+  }
+
+  .avatar {
+    position: relative;
+    width: 200px;
+    margin-right: 5rem;
+
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+    }
+
+    .imagePreview {
+      font-size: 200px;
+    }
+
+    .imageEdit {
+      position: absolute;
+      top: 7rem;
+      right: 0.5rem;
+      padding: 0.2rem;
+      background: deepskyblue;
+      border: 0;
+      border-radius: 0.3rem;
+      font-size: 0.8rem;
+      cursor: pointer;
+    }
+
+    .imageExit {
+      position: absolute;
+      top: 0.6rem;
+      right: 0.2rem;
+      background: red;
+      border: 0;
+      border-radius: 7px;
+      color: white;
+      font-size: 0.7rem;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    flex-direction: row;
+    .profile {
+      .passwordBox {
+        i {
+          right: 1.9rem;
+        }
+      }
+    }
+  }
+}

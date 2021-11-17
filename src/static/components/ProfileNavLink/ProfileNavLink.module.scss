@@ -1,0 +1,17 @@
+.wrapper {
+  padding: 0.5rem 2rem 0.5rem 0.2rem;
+  cursor: pointer;
+
+  &:hover {
+    background: rgba(0, 191, 255, 0.1);
+  }
+  span {
+    display: block;
+    color: deepskyblue;
+    text-decoration: none;
+  }
+}
+
+.highlighted {
+  background: rgba(0, 191, 255, 0.1);
+}

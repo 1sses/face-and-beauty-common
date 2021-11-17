@@ -1,0 +1,29 @@
+.wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  font-family: Nunito, sans-serif;
+
+  .articles {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .filtering {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    input {
+      width: 200px;
+      height: 30px;
+      border: 1px solid black;
+      font-family: Nunito, sans-serif;
+      font-size: 0.6rem;
+
+      &:focus {
+        outline: 0;
+        border-color: deepskyblue;
+      }
+    }
+  }
+}

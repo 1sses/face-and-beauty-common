@@ -1,0 +1,46 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  .employees {
+    margin: 3rem 0;
+    font-family: Montserrat, sans-serif;
+
+    .group {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .group:nth-child(2n) {
+      background: #222222;
+      color: white;
+    }
+  }
+
+  .description {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 1rem;
+    font-family: "Nunoto Thin", sans-serif;
+    font-size: 0.7rem;
+
+    a {
+      color: deepskyblue;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    .employees {
+      .group {
+        flex-direction: row;
+        padding: 2rem;
+      }
+    }
+  }
+}

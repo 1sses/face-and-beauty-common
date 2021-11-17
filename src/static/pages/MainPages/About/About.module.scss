@@ -1,0 +1,12 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  .description {
+    max-width: 750px;
+    margin: 2.5rem auto;
+    padding: 1rem;
+    font-family: "Nunoto Thin", sans-serif;
+    font-size: 0.7rem;
+  }
+}

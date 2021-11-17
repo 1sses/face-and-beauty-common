@@ -1,0 +1,75 @@
+.wrapper {
+
+  font-size: 0.7rem;
+
+  .group {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border: 2px solid deepskyblue;
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .category {
+      padding: 0.3rem;
+      border: 2px solid green;
+
+      h3 {
+        margin: 0 0 0.5rem 0;
+        text-align: left;
+      }
+
+      .service {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.3rem;
+        padding: 0.2rem;
+        border: 2px solid tomato;
+
+        .buttons {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+
+          button {
+            margin-right: 0.5rem;
+            background: none;
+            border: 0;
+            font-size: 0.7rem;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .editor .delete {
+    h3 {
+      font-size: 1.2rem;
+    }
+  }
+
+  .delete {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    .group {
+      padding: 1rem;
+      .category {
+        .service {
+          .buttons {
+            flex-direction: row;
+          }
+        }
+      }
+    }
+  }
+}

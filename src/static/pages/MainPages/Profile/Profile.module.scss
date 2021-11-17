@@ -1,0 +1,36 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 2rem;
+  font-family: Nunito, sans-serif;
+
+  .navBar {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    border-radius: 7px;
+    border: 2px solid deepskyblue;
+    font-size: 0.7rem;
+  }
+
+  .settings {
+    display: flex;
+    flex-direction: column;
+    background: whitesmoke;
+    width: 100vw;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    flex-direction: row;
+    .navBar {
+      align-self: flex-start;
+    }
+    .settings {
+      width: 35rem;
+    }
+  }
+}

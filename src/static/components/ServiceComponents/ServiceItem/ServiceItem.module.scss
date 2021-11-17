@@ -1,0 +1,43 @@
+.wrapper {
+  cursor: pointer;
+
+  .header {
+    background: whitesmoke;
+    padding: 0.3rem;
+    margin-top: 0;
+    font-family: Montserrat, sans-serif;
+    font-size: 0.6rem;
+    transition: all 0.2s ease-in-out;
+
+    &:hover, &:focus {
+      background: skyblue;
+    }
+  }
+
+  .headerClicked {
+    background: skyblue;
+  }
+
+  .popup {
+    font-size: 0.6rem;
+    opacity: 0;
+    height: 0;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .popupClicked {
+    opacity: 1;
+    height: 1.5rem; /* NOT ADAPTIVE, FIX! */
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    .header {
+      font-size: 0.65rem;
+    }
+    .popup {
+      font-size: 0.6rem;
+    }
+  }
+}

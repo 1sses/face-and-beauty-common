@@ -1,0 +1,22 @@
+.zone {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: "Nunoto Thin", sans-serif;
+
+  .serviceHeader {
+    font-family: "Montserrat Bold", sans-serif;
+    font-size: 1.1rem;
+    text-align: center;
+    hyphens: auto;
+    margin: 0.5rem;
+  }
+}
+
+@media  (min-width: 768px){
+  .zone {
+    .serviceHeader {
+      font-size: 2.75rem;
+    }
+  }
+}
