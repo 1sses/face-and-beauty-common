@@ -11,17 +11,14 @@ const { MessageController } = require('./controllers/message.controller')
 const { AppointmentController } = require('./controllers/appointment.controller')
 const { StatisticsController } = require('./controllers/statistics.controller')
 
-const fs = require('fs')
-const path = require('path')
-
 const router = new Router()
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    if (req.url === '/change-avatar') {
+    if (req.url === '/api/change-avatar') {
       cb(null, 'uploads/avatars')
     }
-    if (req.url === '/new-employee' || req.url === '/update-employee') {
+    if (req.url === '/api/new-employee' || req.url === '/api/update-employee') {
       cb(null, 'uploads/employees')
     }
   },
@@ -74,9 +71,5 @@ router.get('/api/user-orders', tokenValidation, AppointmentController.getUserOrd
 router.put('/api/delete-order', tokenValidation, AppointmentController.delete)
 
 router.get('/api/about', StatisticsController.getStatistics)
-
-router.get('/api/', ctx => {
-  ctx.body = fs.readFileSync(path.resolve(path.join('build', 'index.html')), 'utf8')
-})
 
 module.exports = router

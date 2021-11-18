@@ -1,7 +1,7 @@
 class CookieService {
   static setToken (ctx, value) {
     ctx.cookies.set('jwt', value,
-      { httpOnly: false, expires: new Date(Date.now() + 30 * 24 * 3600 * 1000), sameSite: 'strict', secure: false })
+      { httpOnly: false, expires: new Date(Date.now() + 30 * 24 * 3600 * 1000) })
   }
 
   static getToken (ctx) {
@@ -9,7 +9,7 @@ class CookieService {
   }
 
   static clearToken (ctx) {
-    ctx.cookies.set('jwt', '', { httpOnly: false, sameSite: 'strict', secure: false })
+    ctx.cookies.set('jwt', '')
   }
 }
 

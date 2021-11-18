@@ -11,7 +11,6 @@ const app = new Koa()
 
 app.use(errorMiddleware)
 app.use(serve('./uploads'))
-app.use(serve('./build'))
 app.use(cors({ credentials: true, exposeHeaders: '*' }))
 app.use(bodyParser())
 app.use(router.routes())

@@ -20,7 +20,7 @@ class UserSettingsController {
   static async changeAvatar (ctx) {
     const { userId } = ctx.request
     const imagePath = ctx.file?.path
-    await UserService.changeAvatar(userId, imagePath)
+    await UserService.changeAvatar(userId, imagePath.replaceAll('\\', '/'))
     ctx.body = { message: answers.success.change.avatar }
   }
 

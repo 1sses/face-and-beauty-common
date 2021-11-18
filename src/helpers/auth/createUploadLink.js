@@ -1,7 +1,6 @@
-const { config } = require('../../config')
 const createUploadLink = (imageUrl) => {
-  const imagePath = imageUrl.split('uploads\\')[1]
-  return `${config.baseUrl}:${config.port}/${imagePath}` // CHANGED, COULD BE ERRORS
+  const imagePath = imageUrl.split('uploads/')[1]
+  return `${process.env.BASE_URL ?? 'http://localhost:5000'}/${imagePath}` // CHANGED, COULD BE ERRORS
 }
 
 module.exports = { createUploadLink }
