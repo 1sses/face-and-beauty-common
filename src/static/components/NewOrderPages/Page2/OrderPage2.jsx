@@ -16,7 +16,7 @@ export const themeOptions = createTheme({
   }
 })
 
-const OrderPage2 = ({ date, setDate, time, setTime }) => {
+const OrderPage2 = ({ date, setDate, time, setTime, updater }) => {
   const [appointments, setAppointments] = useState([])
   const [employeeCount, setEmployeeCount] = useState(0)
 
@@ -34,7 +34,7 @@ const OrderPage2 = ({ date, setDate, time, setTime }) => {
       if (timeValue % 30 !== 0) return true
       const hours = time.getHours()
       if (dateAppointments
-        .filter(order => order.time.split('#')[1] === `${hours}:${timeValue}`)
+        .filter(order => order.time.split('#')[1] === `${hours}:${timeValue.toString().padEnd(2, '0')}`)
         .length >= employeeCount) return true
     }
   }
@@ -48,11 +48,11 @@ const OrderPage2 = ({ date, setDate, time, setTime }) => {
         }
       })
       .catch(err => console.log(err))
-  }, [])
+  }, [updater])
   useEffect(() => {
     setTime(new Date(0, 0, 0, 0, 0))
     setDateAppointments(appointments.filter(order => order.time.split('#')[0] === date.toLocaleDateString()))
-  }, [date])
+  }, [date, appointments])
 
   return (
     <div className={style.wrapper}>

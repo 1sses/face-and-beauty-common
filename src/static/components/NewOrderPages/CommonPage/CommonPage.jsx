@@ -7,6 +7,7 @@ import { AuthContext } from '../../../context/auth'
 import Button from '../../UI/Button'
 import { appendAppointmentAuto, appendAppointmentHard } from '../../../api/appointment'
 import { ReporterContext } from '../../../context/reporter'
+import useUpdater from '../../../hooks/useUpdater'
 
 const CommonPage = ({ confirmText, appendHard }) => {
   const [showCommon, setShowCommon] = useState(false)
@@ -21,6 +22,8 @@ const CommonPage = ({ confirmText, appendHard }) => {
 
   const [serviceId, setServiceId] = useState(0)
   const [servicePrice, setServicePrice] = useState('')
+
+  const [updater, update] = useUpdater()
 
   const { auth } = useContext(AuthContext)
   const reporter = useContext(ReporterContext)
@@ -42,6 +45,7 @@ const CommonPage = ({ confirmText, appendHard }) => {
         .then(res => {
           if (!res.error) reporter.showReporter(res.message, false)
           else reporter.showReporter(res.error, true)
+          update()
         })
         .catch(err => console.log(err))
     } else {
@@ -49,6 +53,7 @@ const CommonPage = ({ confirmText, appendHard }) => {
         .then(res => {
           if (!res.error) reporter.showReporter(res.message, false)
           else reporter.showReporter(res.error, true)
+          update()
         })
         .catch(err => console.log(err))
     }
@@ -67,7 +72,7 @@ const CommonPage = ({ confirmText, appendHard }) => {
               group={group} setGroup={setGroup}
               category={category} setCategory={setCategory}
               type={type} setType={setType} setServiceId={setServiceId} setServicePrice={setServicePrice}/>
-            {showPage2 && <OrderPage2 date={date} setDate={setDate} time={time} setTime={setTime}/>}
+            {showPage2 && <OrderPage2 date={date} setDate={setDate} time={time} setTime={setTime} updater={updater} />}
           </section>
           {type && <div className={style.result}>
             <h3>Итого:</h3>

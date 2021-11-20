@@ -35,7 +35,8 @@ const answers = {
     incorrectCredentials: 'Неверный логин или пароль',
     impossiblePassword: 'Невозможный пароль',
     impossibleEmail: 'Невозможный email',
-    nonExistentEmail: 'Данный email не существует!'
+    nonExistentEmail: 'Данный email не существует!',
+    unableAppendOrder: 'Невозможно записаться на текущую дату! Пожалуйста, выберите корректную дату!'
   }
 }
 

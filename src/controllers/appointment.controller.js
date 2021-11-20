@@ -6,14 +6,22 @@ class AppointmentController {
   static async appendAuto (ctx) {
     const { userId } = ctx.request
     const { serviceId, time } = ctx.request.body
-    await AppointmentService.appendAuto(userId, serviceId, time)
-    ctx.body = { message: answers.success.create.appointment }
+    try {
+      await AppointmentService.appendAuto(userId, serviceId, time)
+      ctx.body = { message: answers.success.create.appointment }
+    } catch (e) {
+      ctx.body = { error: answers.error.unableAppendOrder }
+    }
   }
 
   static async appendHard (ctx) {
     const { serviceId, time } = ctx.request.body
-    await AppointmentService.appendHard(serviceId, time)
-    ctx.body = { message: answers.success.create.appointment }
+    try {
+      await AppointmentService.appendHard(serviceId, time)
+      ctx.body = { message: answers.success.create.appointment }
+    } catch (e) {
+      ctx.body = { error: answers.error.unableAppendOrder }
+    }
   }
 
   static async current (ctx) {
