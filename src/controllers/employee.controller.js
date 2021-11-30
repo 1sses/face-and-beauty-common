@@ -10,7 +10,7 @@ class EmployeeController {
     const user = await UserService.getUserByEmail(email)
     if (user) {
       await UserService.changeRole(user.id, role)
-      await EmployeeService.add(user.id, name, position, photo)
+      await EmployeeService.add(user.id, name, position, photo.replaceAll('\\', '/'))
       ctx.body = { message: answers.success.create.employee }
     } else {
       ctx.body = { error: answers.error.nonExistentEmail }
@@ -22,7 +22,7 @@ class EmployeeController {
     const photo = ctx.file?.path
     const user = await UserService.getUserByEmail(email)
     await UserService.changeRole(user.id, role)
-    await EmployeeService.updateEmployeeInfo(id, name, position, photo)
+    await EmployeeService.updateEmployeeInfo(id, name, position, photo.replaceAll('\\', '/'))
     ctx.body = { message: answers.success.update.employee }
   }
 
